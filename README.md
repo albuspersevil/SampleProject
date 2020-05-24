@@ -5,7 +5,7 @@ First, clone project:
 git clone git@github.com:albuspersevil/SampleProject.git
 
 # Access project---- get into project directory in terminal
-cd crud-laravel-5.7
+cd portal
 
 # Install dependencies
 composer install
