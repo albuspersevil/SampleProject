@@ -2,7 +2,7 @@ Download
 First, clone project:
 
 # clone
-git clone https://github.com/carlosfgti/crud-laravel-5.7.git
+git clone git@github.com:albuspersevil/SampleProject.git
 
 # Access project---- get into project directory in terminal
 cd crud-laravel-5.7
@@ -12,6 +12,13 @@ composer install
 
 # Create file .env
 cp .env.example .env
+configure the database:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Sampleminiproject
+DB_USERNAME=root
+DB_PASSWORD=
 
 # Generate key
 php artisan key:generate
@@ -19,6 +26,9 @@ php artisan key:generate
 # Run migrations (tables and Seeders)
 php artisan migrate
 php artisan db:seed --class=UsersTableSeeder
+
+#link the public and storage folder
+php artisan storage:link
 
 #Permissons
 sudo chmod -r 777 storage  provide to the storage folder.
