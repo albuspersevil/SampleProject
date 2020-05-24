@@ -50,3 +50,6 @@ intervention package is used for the image operations.
 User can Login after first create a company so that it will appear in the company dropdown on create employee form.
 There is sidebar Employee and Company on click any one of them two options will appear.
 add new and listing.
+Middleware: authenticate custom middleware is been used to prevent the unauthorised activity.Only Authenticated user can perform the activity.
+Validations:Request Classes are being used for the server side validations as well jquery for front end on image.
+Controllers:Resouhrce controllers are being used.
