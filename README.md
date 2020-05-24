@@ -43,5 +43,10 @@ You can also access through http://localhost/portal/public/login
 email:admin@admin.com
 pass:123456
 
-#package info 
+#package used 
 intervention package is used for the image operations.
+
+#project guide
+User can Login after first create a company so that it will appear in the company dropdown on create employee form.
+There is sidebar Employee and Company on click any one of them two options will appear.
+add new and listing.
