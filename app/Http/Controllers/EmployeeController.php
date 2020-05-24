@@ -23,7 +23,7 @@ class EmployeeController extends Controller
     {
         $i=0;
         $empdata=Employee::all();
-        return view('employeeinfo',compact('empdata','i'));
+        return view('employee.employeeinfo',compact('empdata','i'));
     }
 
     /**
@@ -34,7 +34,7 @@ class EmployeeController extends Controller
     public function create()
     {
         $company=Company::all();
-        return view('addnewemployee',compact('company'));
+        return view('employee.addnewemployee',compact('company'));
     }
 
     /**
@@ -74,7 +74,7 @@ class EmployeeController extends Controller
     public function show($id)
     {
         $employee = Employee::find($id);   
-        return view('showcompanyinfo',compact('employee')); 
+        return view('view',compact('employee')); 
     }
 
     /**
@@ -87,7 +87,7 @@ class EmployeeController extends Controller
     {   
         $company=Company::all();
         $employee = Employee::find($id);
-        return view('editemployee', compact('employee','company'));
+        return view('employee.editemployee', compact('employee','company'));
     }
 
     /**

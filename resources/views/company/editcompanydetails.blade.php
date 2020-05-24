@@ -18,8 +18,6 @@
               <div class="card-header">
                 <h3 class="card-title">Add New Company</h3>
               </div>
-              <!-- /.card-header -->
-              <!-- form start -->
             <form role="form" method="post" action="{{route('company.update',$data->id)}}" enctype="multipart/form-data">
               <input type="hidden" name="id" value="{{$data->id}}">
               <input type="hidden" id="url" name="url" value="{{ url('/') }}" />
@@ -109,24 +107,9 @@
 
   </div>
 </div>
-
-
-
-
-     </div><!-- /.container-fluid -->
+     </div>
    </section>
-<!-- Content Header (Page header) -->
 
-<!-- /.content-header -->
-
-<!-- Main content -->
-<section class="content">
-  <div class="container-fluid">
-    <!-- Small boxes (Stat box) -->
-    <div class="row">
-
-    </div>
-  </div>
 </div>
 
 <script src="{{asset('js/toastr.min.js')}}"></script>

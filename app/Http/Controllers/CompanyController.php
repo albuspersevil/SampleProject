@@ -24,7 +24,7 @@ class CompanyController extends Controller
     {   
         $i=0;
         $userdata=Company::all();
-        return view('companyinfo',compact('userdata','i'));
+        return view('company.companyinfo',compact('userdata','i'));
     }
 
     /**
@@ -34,7 +34,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('addnewcompany');
+        return view('company.addnewcompany');
     }
 
     /**
@@ -77,7 +77,7 @@ class CompanyController extends Controller
     public function show($id)
     {
      $company = Company::find($id);   
-     return view('showcompanyinfo',compact('company')); 
+     return view('view',compact('company')); 
     }
 
     /**
@@ -89,7 +89,7 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $data = Company::find($id);
-        return view('editcompanydetails',compact('data'));
+        return view('company.editcompanydetails',compact('data'));
     }
 
     /**
@@ -107,16 +107,16 @@ class CompanyController extends Controller
         $company->company_email=$input['company_email'];
         $company->company_website=$input['company_website'];
         if (!empty($request->logo)) {
-                if (Storage::disk('public')->exists($company->company_logo)) {
-                    $file = public_path('storage/') . $company->company_logo;
-                    unlink($file);
-                }
-                if (request()->has('logo')) {
-                    $company->company_logo = request()->logo->store('images', 'public');
-                    $img_path = public_path('storage/uploads/') . $company->company_logo;
-                    $image = Image::make($request->file('logo')->getRealPath())->resize('200', '200');
-                    $image->save();
-                }
+            if (Storage::disk('public')->exists($company->company_logo)) {    //deleting the existing
+                $file = public_path('storage/') . $company->company_logo;
+                unlink($file);
+            }
+            if (request()->has('logo')) {
+                $company->company_logo = request()->logo->store('images', 'public');   //updating the image
+                $img_path = public_path('storage/uploads/') . $company->company_logo;
+                $image = Image::make($request->file('logo')->getRealPath())->resize('200', '200');
+                $image->save();
+            }
             }
         if($company->save())
         {

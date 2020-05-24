@@ -43,3 +43,5 @@ You can also access through http://localhost/portal/public/login
 email:admin@admin.com
 pass:123456
 
+#package info 
+intervention package is used for the image operations.
