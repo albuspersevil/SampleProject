@@ -1,0 +1,36 @@
+ .custom-file-control input[type="file"] {
+    
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+input[type="file" i] {
+    -webkit-appearance: initial;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    }
+    .custom-file-control {
+    position: relative;
+    width: 170px !important;
+    background: #29ABE2;
+    color: #fff;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 7px;
+}
+a, a:hover {
+    color: #29ABE2;
+}
