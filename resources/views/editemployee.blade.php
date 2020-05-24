@@ -11,10 +11,14 @@
   <div class="col-12">
 
     <!-- general form elements -->
+            <div class="col-md-12 py-2">
+                <a href="{{route('employee.index')}}" class="btn btn-sm btn-success">Back</a>
+            </div>
             <div class="card card-info">
               <div class="card-header">
                 <h3 class="card-title">Add New Employee</h3>
               </div>
+
               <!-- /.card-header -->
               <!-- form start -->
             <form role="form" method="post" action="{{route('employee.update',$employee->id)}}">
@@ -90,6 +94,7 @@
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Update Employee</button>
                 </div>
+
               </form>
             </div>
             <!-- /.card -->

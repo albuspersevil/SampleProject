@@ -96,34 +96,21 @@
                 </div>
               </form>
             </div>
-            <!-- /.card -->
-
   </div>
 </div>
-
-
-
-
-     </div><!-- /.container-fluid -->
+     </div>
    </section>
-<!-- Content Header (Page header) -->
-
-<!-- /.content-header -->
-
-<!-- Main content -->
 <section class="content">
   <div class="container-fluid">
-    <!-- Small boxes (Stat box) -->
     <div class="row">
 
     </div>
   </div>
 </div>
-<script src="{{asset('js/toastr.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('js/imageupload.js') }}"></script>
 
+<script src="{{asset('js/toastr.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('js/custom.js') }}"></script>
 @endsection
+
 

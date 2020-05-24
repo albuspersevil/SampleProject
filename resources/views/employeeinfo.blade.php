@@ -12,14 +12,15 @@
 <div class="card-header">
   <h3 class="card-title"></h3>
 </div>
-<!-- /.card-header -->
+
 @if ($message = Session::get('success'))
       <div class="alert alert-success">
         <p>{{$message}}</p>
+
       </div>
     @endif
 <div class="card-body">
-  <table id="example1" class="table table-bordered table-striped">
+  <table id="datatable" class="table table-bordered table-striped">
     <thead>
     <tr>
       <th>No #</th>
@@ -43,6 +44,7 @@
 
         <td>
             <form action="{{ route('employee.destroy', $data->id) }}" method="post">
+              <a class="btn btn-sm btn-success" href="{{route('employee.show',$data->id)}}">Show</a>
               <a class="btn btn-sm btn-warning" href="{{route('employee.edit',$data->id)}}">Edit</a>
               @csrf
               @method('DELETE')
@@ -57,23 +59,13 @@
 
   </table>
 </div>
-<!-- /.card-body -->
-</div>
-<!-- /.card -->
+
 </div>
 
+</div>
       </div>
-
-
-
-
-     </div><!-- /.container-fluid -->
+     </div>
    </section>
-<!-- Content Header (Page header) -->
-
-<!-- /.content-header -->
-
-<!-- Main content -->
 <section class="content">
   <div class="container-fluid">
     <!-- Small boxes (Stat box) -->
@@ -82,23 +74,8 @@
     </div>
   </div>
 </div>
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
 <script  src="{{ asset('plugins/datatables/jquery.dataTables.js') }}"></script>
 <script  src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
-
-<script>
-
-$( document ).ready(function() {
-
-  $("#example1").DataTable();
-});
-
-  $(document).ready(function(){
-        $(".alert-success").delay(1000).slideUp(300);
-    });
-  $(document).ready(function(){
-        $(".alert-danger").delay(1000).slideUp(300);
-    });
-
-</script>
+<script src="{{ asset('js/custom.js') }}"></script>
 @endsection

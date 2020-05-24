@@ -13,13 +13,13 @@
   <h3 class="card-title"></h3>
 </div>
 <!-- /.card-header -->
-@if ($message = Session::get('success'))
+@if ($message = Session::pull('success'))
       <div class="alert alert-success">
         <p>{{$message}}</p>
       </div>
     @endif
 <div class="card-body">
-  <table id="company_details" class="table table-bordered table-striped">
+  <table id="datatable" class="table table-bordered table-striped">
     <thead>
     <tr>
       <th>No #</th>
@@ -42,6 +42,7 @@
       </td>
         <td>
             <form action="{{ route('company.destroy', $data->id) }}" method="post">
+              <a class="btn btn-sm btn-success" href="{{route('company.show',$data->id)}}">Show</a>
               <a class="btn btn-sm btn-warning" href="{{route('company.edit',$data->id)}}">Edit</a>
               @csrf
               @method('DELETE')
@@ -81,23 +82,8 @@
     </div>
   </div>
 </div>
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script  src="{{ asset('plugins/datatables/jquery.dataTables.js') }}"></script>
-<script  src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 
-<script>
-
-$( document ).ready(function() {
-
-  $("#company_details").DataTable();
-});
-
-  $(document).ready(function(){
-        $(".alert-success").delay(1000).slideUp(300);
-    });
-  $(document).ready(function(){
-        $(".alert-danger").delay(1000).slideUp(300);
-    });
-
-</script>
 @endsection

@@ -1,7 +1,18 @@
+$( document ).ready(function() {
+
+  $("#datatable").DataTable();
+});
+
+  $(document).ready(function(){
+        $(".alert-success").delay(1000).slideUp(300);
+    });
+  $(document).ready(function(){
+        $(".alert-danger").delay(1000).slideUp(300);
+    });
+
  $(document).ready(function () {
      
 var BASE_URL=$('input:hidden[name=url]').val();
-alert(BASE_URL);
     $('#remove-logo').on('click', function (e) { 
         $('#company-logo').attr('src', BASE_URL+'images/image-icon.png');
         $('#logo-name').text('');

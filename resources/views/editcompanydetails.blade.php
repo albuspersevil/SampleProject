@@ -11,6 +11,9 @@
   <div class="col-12">
 
     <!-- general form elements -->
+            <div class="col-md-12 py-2">
+                <a href="{{route('company.index')}}" class="btn btn-sm btn-success">Back</a>
+            </div>
             <div class="card card-info">
               <div class="card-header">
                 <h3 class="card-title">Add New Company</h3>
@@ -127,6 +130,6 @@
 </div>
 
 <script src="{{asset('js/toastr.min.js')}}"></script>
-<script src="{{ asset('js/imageupload.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 @endsection
 

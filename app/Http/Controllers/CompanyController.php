@@ -60,7 +60,7 @@ class CompanyController extends Controller
         if($company->save())
         {
             return redirect()->route('company.index')
-                      ->with('success', 'Company Info updated successfully');
+                      ->with('success', 'Company Created successfully');
         }
         else
         {
@@ -76,7 +76,8 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-      
+     $company = Company::find($id);   
+     return view('showcompanyinfo',compact('company')); 
     }
 
     /**

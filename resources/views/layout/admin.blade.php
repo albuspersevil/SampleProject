@@ -59,12 +59,12 @@
     <!-- Brand Logo -->
   
 
-    <a href="{{ url('mytask') }}"  class="brand-link"  style="border-bottom:0px;margin-left: 20px;  margin-top: -11px;">
+    <a href="#"  class="brand-link"  style="border-bottom:0px;margin-left: 20px;  margin-top: -11px;">
          <!-- <i class="nav-icon far fa-plus-square"></i> -->
          <i class="fas fa-tasks"></i>
 
      <span class="brand-text font-weight-light"  style="font-size: 15px;color: white;margin-left: 12px;">
-       My Tasks</span>
+       Menu</span>
    </a>
 
 
@@ -107,9 +107,6 @@
         </ul>
 
           </li>
-
-
-
           <li class="nav-item has-treeview">
             <a  href="{{ url('roles') }}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
@@ -134,10 +131,6 @@
         
         </ul>
           </li>
-       
-
-       
-
         </ul>
       </li>
 
@@ -153,11 +146,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.1
-    </div>
+    <strong> <a href="#">VaibhavCorp LTD.</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->
@@ -166,22 +155,10 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
 
-<!-- jQuery -->
-
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-
-<!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.js') }}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-
-<script src="{{ asset('js/common.js') }}"></script>
 </body>
 </html>
