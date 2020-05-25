@@ -54,5 +54,6 @@ add new and listing.
 Middleware: authenticate custom middleware is been used to prevent the unauthorised activity.Only Authenticated user can perform the activity.
 Validations:Request Classes are being used for the server side validations as well jquery for front end on image.
 Controllers:Resource controllers are being used.
+Datables are used to show the records.
 There is login , logout , crud on company , crud on employee ..I tried to do the same as i was asked to do so.
 
