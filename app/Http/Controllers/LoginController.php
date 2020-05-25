@@ -29,7 +29,6 @@ class LoginController extends Controller
         // return Redirect::to('secure');
         // for now we'll just echo success (even though echoing in a controller is bad)
         $userdata = User::getuserData();
-        //dd($data);
         return view('userinfo',compact('userdata'));
 
     } else {        
