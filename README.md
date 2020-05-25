@@ -52,4 +52,6 @@ There is sidebar Employee and Company on click any one of them two options will 
 add new and listing.
 Middleware: authenticate custom middleware is been used to prevent the unauthorised activity.Only Authenticated user can perform the activity.
 Validations:Request Classes are being used for the server side validations as well jquery for front end on image.
-Controllers:Resouhrce controllers are being used.
+Controllers:Resource controllers are being used.
+There is login , logout , crud on company , crud on employee ..I tried to do the same as i was asked to do so.
+
