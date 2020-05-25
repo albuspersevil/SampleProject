@@ -45,6 +45,7 @@ pass:123456
 
 #package used 
 intervention package is used for the image operations.
+Toastr is used to show notification message at some point.
 
 #project guide
 User can Login after first create a company so that it will appear in the company dropdown on create employee form.
