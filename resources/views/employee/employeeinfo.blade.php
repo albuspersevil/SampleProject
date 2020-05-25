@@ -18,7 +18,13 @@
         <p>{{$message}}</p>
 
       </div>
-    @endif
+@endif
+@if ($message = Session::get('message'))
+      <div class="alert alert-success">
+        <p>{{$message}}</p>
+
+      </div>
+@endif    
 <div class="card-body">
   <table id="datatable" class="table table-bordered table-striped">
     <thead>

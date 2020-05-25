@@ -1,8 +1,6 @@
 $( document ).ready(function() {
-
   $("#datatable").DataTable();
 });
-
   $(document).ready(function(){
         $(".alert-success").delay(1000).slideUp(300);
     });
